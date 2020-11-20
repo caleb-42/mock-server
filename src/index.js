@@ -1,5 +1,6 @@
 const jsonServer = require("json-server");
 const server = jsonServer.create();
+require("dotenv").config();
 
 const db = require("../db");
 const router = jsonServer.router(db);
@@ -16,6 +17,6 @@ Routes(server);
 
 server.use(middlewares);
 server.use(router);
-server.listen(3000, () => {
+server.listen(process.env.PORT, () => {
   console.log("Json Server is running");
 });
