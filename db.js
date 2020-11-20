@@ -7,10 +7,10 @@ let obj = {};
 function generateUsers() {
   obj.users = [];
   for (let i = 0; i < 10; i++) {
-    let id = faker.random.uuid();
-    let firstName = faker.name.firstName();
-    let lastName = faker.name.lastName();
-    let email = faker.internet.email();
+    let id = i;
+    let firstName = i ? faker.name.firstName() : "ewere";
+    let lastName = i ? faker.name.lastName() : "ebie";
+    let email = i ? faker.internet.email() : "caleb@gmail.com";
     const salt = bcrypt.genSaltSync(10);
     let password = bcrypt.hashSync("12345", salt);
     let socialAuth = false;

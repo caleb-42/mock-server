@@ -20,7 +20,7 @@ class DbHandler {
   }
 
   async createUser(newUser) {
-    const id = faker.random.uuid();
+    const id = this.db.length;
     const user = _.pick(newUser, [
       "firstName",
       "lastName",
