@@ -4,7 +4,7 @@
   "description": "Node.js example server starter project",
   "main": "src/index.js",
   "engines": {
-    "node": "12.x"
+    "node": "10.21.0"
   },
   "scripts": {
     "start": "nodemon src/index.js"

@@ -14,10 +14,8 @@ module.exports = function auth(server) {
       return res.jsonp({ status: "error", data: "user already exist" });
     const token = await DbHandler.createUser(person);
     res.jsonp({
-      data: {
-        token,
-        status: "success"
-      }
+      token,
+      status: "success"
     });
   });
 };
