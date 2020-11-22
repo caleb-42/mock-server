@@ -19,9 +19,9 @@ class DbHandler {
     return jwt.sign({ id: user.id }, process.env.JWT_PRIVATE_KEY);
   }
 
-  async createUser(newUser) {
-    const id = this.db.length;
-    const user = _.pick(newUser, [
+  createUser(newUser) {
+    const id = this.db.users.length;
+    let user = _.pick(newUser, [
       "firstName",
       "lastName",
       "email",
@@ -30,8 +30,9 @@ class DbHandler {
     ]);
     user.id = id;
     user.socialAuth = user.socialAuth || false;
-    const salt = await bcrypt.genSalt(10);
-    user.password = await bcrypt.hash(user.password, salt);
+    const salt = bcrypt.genSaltSync(10);
+    user.password = bcrypt.hashSync(user.password, salt);
+    console.log(user, id);
     this.db.users.push(user);
     const token = this.generateJWT(user);
     return token;
