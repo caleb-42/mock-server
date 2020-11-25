@@ -46,7 +46,13 @@ module.exports = function auth(server) {
       if (!userExist)
         return res.jsonp({ status: "error", message: "user does not exist" });
 
-      const token = await DbHandler.createUser(person);
+      const token = await DbHandler.validateUser(person, userExist);
+      if (!token)
+        return res.jsonp({
+          status: "error",
+          message: "email or password is invalid"
+        });
+
       res.jsonp({
         data: token,
         status: "success"
