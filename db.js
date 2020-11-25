@@ -12,7 +12,7 @@ function generateUsers() {
     let lastName = i ? faker.name.lastName() : "ebie";
     let email = i ? faker.internet.email() : "caleb@gmail.com";
     const salt = bcrypt.genSaltSync(10);
-    let password = bcrypt.hashSync("12345", salt);
+    let password = bcrypt.hashSync("12345678", salt);
     let socialAuth = false;
 
     obj.users.push({
