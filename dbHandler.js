@@ -38,8 +38,9 @@ class DbHandler {
     return token;
   }
 
-  updateUser(oldUser, newUser) {
-    let user = _.pick(newUser, [
+  updateUser(newUser) {
+    let usr = _.pick(newUser, [
+      "id",
       "firstName",
       "lastName",
       "email",
@@ -47,9 +48,13 @@ class DbHandler {
       "password",
       "token"
     ]);
-    const updateUser = { ...oldUser, ...user };
-    this.db.users.push(updateUser);
-    return updateUser;
+
+    const users = this.db.users.map((user) =>
+      user.id === usr.id ? usr : user
+    );
+
+    this.db.users = users;
+    return usr;
   }
 
   async validateUser(guest, user) {

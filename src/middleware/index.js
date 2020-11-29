@@ -9,7 +9,8 @@ class Middleware {
         "/auth/register",
         "/auth/login",
         "/forgot-pass",
-        "/forgot-pass/confirm-token"
+        "/forgot-pass/confirm-token",
+        "/forgot-pass/set-password"
       ].includes(req.url)
     ) {
       console.log("her");

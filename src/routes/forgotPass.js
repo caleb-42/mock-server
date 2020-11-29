@@ -12,9 +12,11 @@ module.exports = function auth(server) {
         body: person,
         query: "email"
       });
+
       if (!userExist)
         return res.jsonp({ status: "error", message: "user does not exist" });
-      const newUser = DbHandler.updateUser(userExist, {
+      const newUser = DbHandler.updateUser({
+        ...userExist,
         ...person,
         token: 1234
       });
@@ -52,8 +54,45 @@ module.exports = function auth(server) {
         });
 
       return res.jsonp({
-        data: "check your mail for a verification code",
+        data: userExist,
         status: "success"
+      });
+    } catch (e) {
+      res.jsonp({ status: "error", message: "something went wrong" });
+    }
+  });
+
+  server.post("/forgot-pass/set-password", async (req, res, next) => {
+    console.log(req.body);
+    try {
+      const person = req.body;
+      if (!(person && person.email && person.password))
+        return res.jsonp({ status: "error", message: "invalid request data" });
+
+      const userExist = DbHandler.find({
+        table: "users",
+        body: person,
+        query: "email"
+      });
+
+      if (!userExist)
+        return res.jsonp({ status: "error", message: "user does not exist" });
+
+      if (userExist.email === person.email) {
+        const newUser = DbHandler.updateUser({
+          ...userExist,
+          ...person,
+          token: null
+        });
+        return res.jsonp({
+          data: newUser,
+          status: "success"
+        });
+      }
+
+      return res.jsonp({
+        status: "error",
+        message: "wrong data provided"
       });
     } catch (e) {
       res.jsonp({ status: "error", message: "something went wrong" });
