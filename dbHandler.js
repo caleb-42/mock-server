@@ -38,6 +38,20 @@ class DbHandler {
     return token;
   }
 
+  updateUser(oldUser, newUser) {
+    let user = _.pick(newUser, [
+      "firstName",
+      "lastName",
+      "email",
+      "socialAuth",
+      "password",
+      "token"
+    ]);
+    const updateUser = { ...oldUser, ...user };
+    this.db.users.push(updateUser);
+    return updateUser;
+  }
+
   async validateUser(guest, user) {
     const validPassword = await bcrypt.compare(guest.password, user.password);
     if (!validPassword) return false;

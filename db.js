@@ -21,7 +21,8 @@ function generateUsers() {
       lastName,
       email,
       password,
-      socialAuth
+      socialAuth,
+      token: null
     });
   }
 }

@@ -4,7 +4,15 @@ const DbHandler = require("../../dbHandler.js");
 class Middleware {
   static async authenticate(req, res, next) {
     console.log("req", req.url);
-    if (["/auth/register", "/auth/login"].includes(req.url)) {
+    if (
+      [
+        "/auth/register",
+        "/auth/login",
+        "/forgot-pass",
+        "/forgot-pass/confirm-token"
+      ].includes(req.url)
+    ) {
+      console.log("her");
       return next();
     }
 
