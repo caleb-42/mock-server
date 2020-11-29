@@ -1,4 +1,5 @@
 const DbHandler = require("../../dbHandler.js");
+const bcrypt = require("bcrypt");
 
 module.exports = function auth(server) {
   server.post("/forgot-pass", async (req, res, next) => {
@@ -78,6 +79,10 @@ module.exports = function auth(server) {
       if (!userExist)
         return res.jsonp({ status: "error", message: "user does not exist" });
 
+      const salt = bcrypt.genSaltSync(10);
+      person.password = bcrypt.hashSync(String(person.password), salt);
+
+      console.log(userExist, person);
       if (userExist.email === person.email) {
         const newUser = DbHandler.updateUser({
           ...userExist,
@@ -95,6 +100,7 @@ module.exports = function auth(server) {
         message: "wrong data provided"
       });
     } catch (e) {
+      console.log(e.message);
       res.jsonp({ status: "error", message: "something went wrong" });
     }
   });

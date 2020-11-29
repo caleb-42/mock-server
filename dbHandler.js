@@ -1,7 +1,6 @@
 const db = require("./db");
 const _ = require("lodash");
 const jwt = require("jsonwebtoken");
-const faker = require("faker");
 const bcrypt = require("bcrypt");
 require("dotenv").config();
 
@@ -52,7 +51,7 @@ class DbHandler {
     const users = this.db.users.map((user) =>
       user.id === usr.id ? usr : user
     );
-
+    console.log("users", users);
     this.db.users = users;
     return usr;
   }
