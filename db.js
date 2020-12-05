@@ -1,5 +1,6 @@
 const faker = require("faker");
 const bcrypt = require("bcrypt");
+const onboarding = require("./database/onboarding");
 const _ = require("lodash");
 
 let obj = {};
@@ -27,9 +28,14 @@ function generateUsers() {
   }
 }
 
+function generateOnboarding() {
+  obj.onboarding = onboarding;
+}
+
 function createDatabase() {
   if (!_.isEmpty(obj)) return obj;
   generateUsers();
+  generateOnboarding();
   return obj;
 }
 

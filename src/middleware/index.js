@@ -10,8 +10,13 @@ class Middleware {
         "/auth/login",
         "/forgot-pass",
         "/forgot-pass/confirm-token",
-        "/forgot-pass/set-password"
-      ].includes(req.url)
+        "/forgot-pass/set-password",
+        "/onboarding",
+        "/onboarding/mentor-others",
+        "/onboarding/find-coaches",
+        "/onboarding/find-coaches"
+      ].includes(req.url) ||
+      /\.png$/.test(req.url)
     ) {
       console.log("her");
       return next();

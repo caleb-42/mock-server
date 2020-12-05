@@ -24,10 +24,14 @@ module.exports = function auth(server) {
         return res.jsonp({ status: "error", message: "user already exist" });
       const token = await DbHandler.createUser(person);
       res.jsonp({
-        data: token,
+        data: {
+          token,
+          onboarding: DbHandler.db.onboarding
+        },
         status: "success"
       });
     } catch (e) {
+      console.log(e);
       res.jsonp({ status: "error", message: "something went wrong" });
     }
   });

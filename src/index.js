@@ -13,7 +13,8 @@ server.get("/db", (req, res) => {
 });
 
 server.use(jsonServer.bodyParser);
-
+/* 
+server.use("/public", server.static("uploads")); */
 server.use(authMiddleware.authenticate);
 
 Routes(server);
