@@ -34,5 +34,41 @@ module.exports = {
         }
       ]
     }
+  ],
+  "find-coaches": [
+    {
+      title: "Career",
+      list: [
+        {
+          icon: "/job_search_icon.png",
+          name: "Find a Job"
+        },
+        {
+          icon: "/career_navigation_icon.png",
+          name: "Switch Careers"
+        },
+        {
+          icon: "/skill_development_icon.png",
+          name: "Learn New Skill"
+        }
+      ]
+    },
+    {
+      title: "Business",
+      list: [
+        {
+          icon: "/launch_startup_icon.png",
+          name: "Start a Company"
+        },
+        {
+          icon: "/building_teams_icon.png",
+          name: "Build a Team"
+        },
+        {
+          icon: "/business_growth_icon.png",
+          name: "Grow a Business"
+        }
+      ]
+    }
   ]
 };
