@@ -70,5 +70,78 @@ module.exports = {
         }
       ]
     }
+  ],
+  "skill-areas": [
+    {
+      sector: "Digital Technology",
+      list: [
+        "Product Management",
+        "Program Management",
+        "Program Design",
+        "Back end Programming",
+        "Web Programming",
+        "Mobile Programming",
+        "Data Science",
+        "ML / AI",
+        "AR / VR",
+        "Gaming",
+        "Cloud Computing",
+        "IoT / Edge Computing",
+        "Crypto / Blockchain"
+      ]
+    },
+    {
+      sector: "Science & Engineering",
+      list: [
+        "Maths",
+        "Physics",
+        "Chemistry",
+        "Life Science",
+        "Electrical / Computer",
+        "Mechanical",
+        "Robotics",
+        "Material Sciences",
+        "Chemical / Petroleum",
+        "Civil / Structural",
+        "Industrial / Manufacturing",
+        "Food Sciences",
+        "R & D"
+      ]
+    },
+    {
+      sector: "Business",
+      list: [
+        "Strategy",
+        "Finance",
+        "Operations",
+        "Management",
+        "Management Consulting",
+        "Branding / Marketing",
+        "Sales / Business Development",
+        "HR / People",
+        "Customer Support",
+        "Supply Chain",
+        "Legal"
+      ]
+    },
+    {
+      sector: "Industries",
+      list: [
+        "Retail",
+        "Telecoms",
+        "Advertising",
+        "Media / Entertainment",
+        "Investment Banking",
+        "Private Equity",
+        "Entrepreneurship",
+        "Venture Capital",
+        "Healthcare",
+        "Education",
+        "Auto",
+        "Aerospace",
+        "Education",
+        "Real Estate"
+      ]
+    }
   ]
 };
