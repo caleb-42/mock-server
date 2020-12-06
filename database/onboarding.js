@@ -75,7 +75,7 @@ module.exports = {
     {
       sector: "Digital Technology",
       list: [
-        "Product Management",
+        "Product/nManagement",
         "Program Management",
         "Program Design",
         "Back end Programming",
