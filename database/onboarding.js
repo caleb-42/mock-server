@@ -144,7 +144,7 @@ module.exports = {
       ]
     }
   ],
-  birthday: [
+  birthdays: [
     {
       zodiac: "/capricon.png",
       name: "Capricorn",
