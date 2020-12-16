@@ -14,7 +14,8 @@ class Middleware {
         "/onboarding",
         "/onboarding/mentor-others",
         "/onboarding/find-coaches",
-        "/onboarding/find-coaches"
+        "/onboarding/find-coaches",
+        "/onboarding/birthday"
       ].includes(req.url) ||
       /\.png$/.test(req.url)
     ) {
