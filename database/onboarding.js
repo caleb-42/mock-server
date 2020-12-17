@@ -136,7 +136,6 @@ module.exports = {
         "Entrepreneurship",
         "Venture Capital",
         "Healthcare",
-        "Education",
         "Auto",
         "Aerospace",
         "Education",
@@ -263,10 +262,6 @@ module.exports = {
     {
       icon: "/investing_icon.png",
       name: "Finance & Investing"
-    },
-    {
-      icon: "/social_impact_icon.png",
-      name: "Volunteering & Social Impact"
     },
     {
       icon: "/social_impact_icon.png",
