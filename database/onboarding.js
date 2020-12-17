@@ -149,7 +149,7 @@ module.exports = {
       zodiac: "/capricon.png",
       name: "Capricorn",
       date: { start: "22/12", end: "19/1" },
-      character: "You are a natural entrepreneur",
+      character: "You are a natural entrepreneur!",
       traits: `Action-oriented, gritty, and determined, you break barriers and launch ventures.`,
       caps: `Popular Caps include:|Jeff Bezos (Founder Amazon)|Benjamin Franklin (US Founding Father)|J. R. R. Tolkien (Writer, Lord of the Rings)`
     },
@@ -157,7 +157,7 @@ module.exports = {
       zodiac: "/aquarius.png",
       name: "Aquarius",
       date: { start: "20/1", end: "18/2" },
-      character: "You are a revolutionary",
+      character: "You are a revolutionary!",
       traits: `Nonconformist, innovative, and collaborative, you are a force for progress and impact.`,
       caps: `Popular Aquarians include:|Abraham Lincoln (16th US President)|Wolfgang Mozart (Composer & Prodigy)|Rosa Parks (Activist)`
     },
@@ -241,6 +241,60 @@ module.exports = {
       character: `You are a go-getter!`,
       traits: `Fearless, intelligent, and adaptable, life is one big adventure which you can conquer.`,
       caps: `Popular Sags include:|Walt Disney (Animator)|Chadwick Boseman (Actor, Black Panther)|Jane Austen (Novelist)`
+    }
+  ],
+  interests: [
+    {
+      icon: "/tourism_icon.png",
+      name: "Food & Tourism"
+    },
+    {
+      icon: "/photography_icon.png",
+      name: "Art & Photography"
+    },
+    {
+      icon: "/literature_icon.png",
+      name: "Writing & Literature"
+    },
+    {
+      icon: "/media_icon.png",
+      name: "Music & Media"
+    },
+    {
+      icon: "/investing_icon.png",
+      name: "Finance & Investing"
+    },
+    {
+      icon: "/social_impact_icon.png",
+      name: "Volunteering & Social Impact"
+    },
+    {
+      icon: "/social_impact_icon.png",
+      name: "Volunteering & Social Impact"
+    },
+    {
+      icon: "/nature_icon.png",
+      name: "Nature & Outdoors"
+    },
+    {
+      icon: "/health_icon.png",
+      name: "Health & Fitness"
+    },
+    {
+      icon: "/gaming_icon.png",
+      name: "Sports & Gaming"
+    },
+    {
+      icon: "/law_icon.png",
+      name: "Law & Policy"
+    },
+    {
+      icon: "/energy_icon.png",
+      name: "Energy & Climate"
+    },
+    {
+      icon: "/science_icon.png",
+      name: "Science & Technology"
     }
   ]
 };
