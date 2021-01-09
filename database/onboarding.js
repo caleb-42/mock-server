@@ -77,7 +77,7 @@ module.exports = {
       list: [
         "Product Management",
         "Program Management",
-        "Program Design",
+        "Product Design",
         "Back end Programming",
         "Web Programming",
         "Mobile Programming",
